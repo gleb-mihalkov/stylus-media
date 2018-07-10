@@ -12,7 +12,7 @@ _get-media-value-seed($value)
  * @return {unit}        Значение, уменьшенное на минимальный шаг.
  */
 _decrease-media-value($value)
-  $seed = _get-media-unit-seed($value)
+  $seed = _get-media-value-seed($value)
   return $value - $seed
 
 /**
@@ -21,7 +21,7 @@ _decrease-media-value($value)
  * @return {unit}        Значение, увеличенное на минимальный шаг.
  */
 _increase-media-value($value)
-  $seed = _get-media-unit-seed($value)
+  $seed = _get-media-value-seed($value)
   return $value + $seed
 
 /**
