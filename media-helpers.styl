@@ -4,7 +4,20 @@
  * @return {unit}        Минимальный шаг изменения для данного значения.
  */
 _get-media-value-seed($value)
-  return 1px
+  $seeds = {
+    'rem': 0.001rem,
+    'em': 0.001em,
+    'pt': 0.001pt,
+    '%': 0.001%,
+    'px': 1px,
+    'vh': 0.001vh,
+    'vw': 0.001vw,
+    'vmin': 0.001vmin,
+    'vmax': 0.001vmax,
+    '': 1
+  }
+  $unit = unit($value)
+  return $seeds[$unit]
 
 /**
  * Уменьшает значение на минимальный шаг в зависимости от единицы измерения.
@@ -12,7 +25,7 @@ _get-media-value-seed($value)
  * @return {unit}        Значение, уменьшенное на минимальный шаг.
  */
 _decrease-media-value($value)
-  if $value is a 'unit'
+  if $value is a 'unit' and unit($value, '') > 0
     $seed = _get-media-value-seed($value)
     return $value - $seed
   else
@@ -24,7 +37,7 @@ _decrease-media-value($value)
  * @return {unit}        Значение, увеличенное на минимальный шаг.
  */
 _increase-media-value($value)
-  if $value is a 'unit'
+  if $value is a 'unit' and unit($value, '') >= 0
     $seed = _get-media-value-seed($value)
     return $value + $seed
   else
