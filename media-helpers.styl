@@ -12,8 +12,11 @@ _get-media-value-seed($value)
  * @return {unit}        Значение, уменьшенное на минимальный шаг.
  */
 _decrease-media-value($value)
-  $seed = _get-media-value-seed($value)
-  return $value - $seed
+  if $value is a 'unit'
+    $seed = _get-media-value-seed($value)
+    return $value - $seed
+  else
+    return null
 
 /**
  * Увеличивает значение на минимальный шаг в зависимости от единицы изменения.
@@ -21,8 +24,11 @@ _decrease-media-value($value)
  * @return {unit}        Значение, увеличенное на минимальный шаг.
  */
 _increase-media-value($value)
-  $seed = _get-media-value-seed($value)
-  return $value + $seed
+  if $value is a 'unit'
+    $seed = _get-media-value-seed($value)
+    return $value + $seed
+  else
+    return null
 
 /**
  * Генерирует медиа-запрос по условию "значение свойства меньше или равно
