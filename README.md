@@ -30,34 +30,34 @@ body
 
 ## Описание API
 
-#### media-width-less-then(unit $value)
+### media-width-less-then(unit $value)
 
 *Генерирует медиа-запрос по условию "ширина экрана меньше указанного значения".*
 
-#### media-width-less-eq-then(unit $value)
+### media-width-less-eq-then(unit $value)
 
 *Генерирует медиа-запрос по условию "ширина экрана меньше или равна указанному значению".*
 
-#### media-width-bigger-then(unit $value)
+### media-width-bigger-then(unit $value)
 
 *Генерирует медиа-запрос по условию "ширина экрана больше указанного значения".*
 
-#### media-width-bigger-eq-then(unit $value)
+### media-width-bigger-eq-then(unit $value)
 
 *Генерирует медиа-запрос по условию "ширина экрана больше или равна указанному значению".*
 
-#### media-height-less-then(unit $value)
+### media-height-less-then(unit $value)
 
 *Генерирует медиа-запрос по условию "высота экрана меньше указанного значения".*
 
-#### media-height-less-eq-then(unit $value)
+### media-height-less-eq-then(unit $value)
 
 *Генерирует медиа-запрос по условию "высота экрана меньше или равна указанному значению".*
 
-#### media-height-bigger-then(unit $value)
+### media-height-bigger-then(unit $value)
 
 *Генерирует медиа-запрос по условию "высота экрана больше указанного значения".*
 
-#### media-height-bigger-eq-then(unit $value)
+### media-height-bigger-eq-then(unit $value)
 
 *Генерирует медиа-запрос по условию "высота экрана больше или равна указанному значению".*
