@@ -1,0 +1,22 @@
+{
+  "name": "stylus-media",
+  "version": "1.0.0",
+  "description": "Библиотека генерации медиазапросов для препроцессора Stylus.",
+  "main": "media.styl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gleb-mihalkov/stylus-media.git"
+  },
+  "keywords": [
+    "stylus"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gleb-mihalkov/stylus-media/issues"
+  },
+  "homepage": "https://github.com/gleb-mihalkov/stylus-media#readme"
+}
