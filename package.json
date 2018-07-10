@@ -4,7 +4,7 @@
   "description": "Библиотека генерации медиазапросов для препроцессора Stylus.",
   "main": "media.styl",
   "scripts": {
-    "test": "stylus ./test/*"
+    "test": "stylus ./test/*.styl"
   },
   "repository": {
     "type": "git",
