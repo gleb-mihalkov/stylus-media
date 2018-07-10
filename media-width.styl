@@ -1,0 +1,31 @@
+/**
+ * Генерирует медиа-запрос по условию "ширина экрана меньше
+ * указанного значения".
+ * @param {unit} $value Значение.
+ */
+media-width-less-then($value)
+  _media-less-then('width', $value, block)
+
+/**
+ * Генерирует медиа-запрос по условию "ширина экрана меньше или равна
+ * указанному значению".
+ * @param {unit} $value Значение.
+ */
+media-width-less-eq-then($value)
+  _media-less-eq-then('width', $value, block)
+
+/**
+ * Генерирует медиа-запрос по условию "ширина экрана больше
+ * указанного значения".
+ * @param {unit} $value Значение.
+ */
+media-width-bigger-then($value)
+  _media-bigger-then('width', $value, block)
+
+/**
+ * Генерирует медиа-запрос по условнию "ширина экрана больше или равна
+ * указанному значению".
+ * @param {unit} $value Значение.
+ */
+media-width-bigger-eq-then($value)
+  _media-bigger-eq-then('width', $value, block)

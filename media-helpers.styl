@@ -1,0 +1,69 @@
+/**
+ * Возвращает минимальный шаг для единицы измерения указанного значения.
+ * @param  {unit} $value Значение.
+ * @return {unit}        Минимальный шаг изменения для данного значения.
+ */
+_get-media-value-seed($value)
+  return 1px
+
+/**
+ * Уменьшает значение на минимальный шаг в зависимости от единицы измерения.
+ * @param  {unit} $value Значение.
+ * @return {unit}        Значение, уменьшенное на минимальный шаг.
+ */
+_decrease-media-value($value)
+  $seed = _get-media-unit-seed($value)
+  return $value - $seed
+
+/**
+ * Увеличивает значение на минимальный шаг в зависимости от единицы изменения.
+ * @param  {unit} $value Значение.
+ * @return {unit}        Значение, увеличенное на минимальный шаг.
+ */
+_increase-media-value($value)
+  $seed = _get-media-unit-seed($value)
+  return $value + $seed
+
+/**
+ * Генерирует медиа-запрос по условию "значение свойства меньше или равно
+ * указанному значению".
+ * @param {string} $property Свойство "width" или "height".
+ * @param {unit}   $value    Значение.
+ * @param {string} $content  Стили внутри медиа-запроса.
+ */
+_media-less-eq-then($property, $value, $content)
+  @media screen and (max-{$property} $value)
+    {$content}
+
+/**
+ * Генерирует медиа-запрос по условнию "значение свойства больше или равно
+ * указанному значению".
+ * @param {string} $property Свойство "width" или "height".
+ * @param {unit}   $value    Значение.
+ * @param {string} $content  Стили внутри медиа-запроса.
+ */
+_media-bigger-eq-then($property, $value, $content)
+  @media screen and (min-{$property} $value)
+    {$content}
+
+/**
+ * Генерирует медиа-запрос по условию "значение свойства меньше
+ * указанного значения".
+ * @param {string} $property Свойство "width" или "height".
+ * @param {unit}   $value    Значение.
+ * @param {string} $content  Стили внутри медиа-запроса.
+ */
+_media-less-then($property, $value, $content)
+  $value = _decrease-media-value($value)
+  _media-less-eq-then($property, $value, $content)
+
+/**
+ * Генерирует медиа-запрос по условию "значение свойства больше
+ * указанного значения".
+ * @param {string} $property Свойство "width" или "height".
+ * @param {unit}   $value    Значение.
+ * @param {string} $content  Стили внутри медиа-запроса.
+ */
+_media-bigger-then($property, $value, $content)
+  $value = _increase-media-value($value)
+  _media-bigger-eq-then($property, $value, $content)

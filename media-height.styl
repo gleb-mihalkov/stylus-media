@@ -1,0 +1,31 @@
+/**
+ * Генерирует медиа-запрос по условию "высота экрана меньше
+ * указанного значения".
+ * @param {unit} $value Значение.
+ */
+media-height-less-then($value)
+  _media-less-then('height', $value, block)
+
+/**
+ * Генерирует медиа-запрос по условию "высота экрана меньше или равна
+ * указанному значению".
+ * @param {unit} $value Значение.
+ */
+media-height-less-eq-then($value)
+  _media-less-eq-then('height', $value, block)
+
+/**
+ * Генерирует медиа-запрос по условию "высота экрана больше
+ * указанного значения".
+ * @param {unit} $value Значение.
+ */
+media-height-bigger-then($value)
+  _media-bigger-then('height', $value, block)
+
+/**
+ * Генерирует медиа-запрос по условнию "высота экрана больше или равна
+ * указанному значению".
+ * @param {unit} $value Значение.
+ */
+media-height-bigger-eq-then($value)
+  _media-bigger-eq-then('height', $value, block)
