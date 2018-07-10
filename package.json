@@ -4,7 +4,7 @@
   "description": "Библиотека генерации медиазапросов для препроцессора Stylus.",
   "main": "media.styl",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "stylus ./test/*"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/gleb-mihalkov/stylus-media/issues"
   },
-  "homepage": "https://github.com/gleb-mihalkov/stylus-media#readme"
+  "homepage": "https://github.com/gleb-mihalkov/stylus-media#readme",
+  "devDependencies": {
+    "stylus": "^0.54.5"
+  }
 }
